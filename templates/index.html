@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% set active_page = 'page1' %}
+
+{% block head %}
+<title>Welcome</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock head %}
+
+
+{% block body %}
+    <section id="info">
+        <div class="info-text">
+            <h1 class="info-heading">Welcome to <span class="bank-name">The Next Bank</span></h1>
+        </div>
+        <div class="info-image">
+            <img src="../static/images/credit_card.svg" alt="Credit Card logo">
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="feature">
+            <div class="img-feature">
+                <img src="{{url_for('static',filename = 'images/group.png')}}" alt="customers">
+            </div>
+            <div class="feature-link">
+                <a href="{{url_for('customers')}}">View Customers</a>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="img-feature">
+                <img src="{{url_for('static',filename = 'images/history.png')}}" alt="transaction history">
+            </div>
+            <div class="feature-link">
+                <a href="/transaction-history">Transaction History</a>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="img-feature">
+                <img src="{{url_for('static',filename = 'images/information.png')}}" alt="About Us">
+            </div>
+            <div class="feature-link">
+                <a href="/FAQ">FAQ</a>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock body %}
+

@@ -1,0 +1,79 @@
+/*Table*/
+
+.user-page{
+    text-align : center;
+    margin-top : 5em;
+}
+
+
+.user_profile{
+    text-align : center;
+}
+
+h2{
+    width : 100%;
+}
+
+.user-table{
+    min-height:2vh;
+    width:80%; 
+    margin:0 auto;
+    font-size:1.2em;
+    font-weight:100;
+    line-height:17px;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color : rgb(71, 70, 70);
+    
+}
+
+/*Table heading*/
+
+.table-headings th,.table-headings-profile th{
+    border:1px solid #6863c0;
+    height:40px;
+    padding:12px;
+    text-shadow:1px 1px #ccc;
+    font-weight : 400;
+}
+
+.table-headings-profile th{
+    background-color : #6863c0;
+}
+
+.history_row th{
+    color : #fff;
+}
+
+/*Table elements*/
+
+.table-elements td{
+    border : 1px solid #6863c0;
+    border-radius:2px;
+    padding:20px;
+    text-shadow:1.3px 1.3px #ccc;
+}
+
+.details_button,.user_transaction{
+    color : #6863c0;
+    font-family: "Poppins", sans-serif;
+    font-weight : 1000;
+    background: none;
+    border: 2px solid;
+    padding: 1em 1.5em;
+    font-size: 1em;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,transform 0.25s;
+}
+
+.details_button:hover,.user_transaction:hover {
+    color: #0004ff;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width : 768px){
+    .detail_preserve{
+        display:none;
+    }
+}

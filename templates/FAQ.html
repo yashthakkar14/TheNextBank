@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>FAQ</title>
+<link rel="stylesheet" href="{{url_for('static',filename ='css/FAQ.css')}}">
+{% endblock head %}
+
+{% block body %}
+
+<div class = "FAQ-content">
+    <div class = "about-us">
+        <h2>About Us</h2>
+        <p>The Next Bank is an online transaction bank where the customers can conveniently make transactions just at their fingertips. The customers can view their balance, make their transactions and also view the transactions they have done. </p>
+    </div>
+
+    <div class = "steps">
+        <h2>Steps to Transfer Money</h2>
+        <ol>
+            <li>Go the the view Customers Page in the navigation bar or from the features section</li>
+            <li>Among the list of available users, select your profile and then click on the view profile</li>
+            <li>Click on the Perform Transaction Button in order to perform your transaction</li>
+            <li>Select the receiver and the amount of money you need to transfer</li>
+            <li>Your transaction is now complete if you have entered a valid amount</li>
+        </ol>
+    </div>
+</div>
+{% endblock body %}

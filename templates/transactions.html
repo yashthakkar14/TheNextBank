@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{url_for('static',filename = 'css/transactions.css')}}">
+<title>Transactions</title>
+
+{% endblock head %}
+
+{% block body %}
+
+<form action = "/transactions/{{customer_info.id}}"  id = "transaction_form" , method = "post">
+    <div id = "transaction_details">
+        <label for="sender" class = "transaction_detail">Sender</label>
+        <select name = "sender" id = "sender">
+            <option value="{{customer_info.Name}}">{{customer_info.Name}}</option>
+        </select>
+        <label for="receiver" class = "transaction_detail">Receiver</label>
+        <select name="receiver" id="receiver">
+            {% for customers in other_customers %}
+            <option value = {{customers.Name}} class = "options">{{customers.Name}}</option>
+            {% endfor %}
+        </select>
+        <label for="balance" class = "transaction_detail">Enter the amount you want to transfer</label>
+        <input type="text" placeholder = "Enter the amount" name="balance" id="balance">
+        <p>
+            <span class = "failed_message">{{failed_msg}}</span>
+            <span class = "success_message">{{success_msg}}</span>
+        </p>
+        <button class = "submit">Submit</button>
+    </div>
+</form>
+
+
+{% endblock body %}

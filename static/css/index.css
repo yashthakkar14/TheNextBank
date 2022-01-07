@@ -1,0 +1,140 @@
+/* Info */
+
+#info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    height: 90vh;
+    min-height: 80vh;
+    min-width: 80%;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+#info .info-text {
+    order: 1;
+    text-align: center;
+    width: 50%;
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.info-heading {
+    font-size: 3em;
+}
+
+#info .info-image {
+    order: 2;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.bank-name {
+    color: #6A62F3
+}
+
+@media screen and (max-width:1200px) {
+
+    #info .info-heading {
+        font-size: 2.5em
+    }
+
+    #info .info-image img {
+        width: 80%;
+    }
+}
+
+
+
+
+/* Features */
+#features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    min-width: 80%;
+}
+
+.feature {
+    padding: 5% 2%;
+    text-align: center;
+    border : 2px solid #aba9ee;
+    border-radius : 1%;
+}
+
+.img-feature img {
+    width: 25%;
+    display: block;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.feature-link {
+    margin: 0 auto;
+    background-color: #6A62F3;
+    width: 40%;
+    padding: 2%;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-top: 5%;
+}
+
+.feature-link:hover{
+    transform: scale(1.05);
+    cursor : pointer;
+}
+
+.feature-link a {
+    text-decoration: none;
+    color: white;
+    width : 100%;
+}
+
+
+@media screen and (max-width : 768px) {
+
+    /* Info */
+
+    #info {
+        flex-direction: column-reverse;
+        justify-content: center;
+        min-height: 70vh;
+        margin-bottom : none;
+    }
+
+    #info .info-image {
+        margin: none;
+        width: 100%;
+        max-width: none;
+        flex-direction: flex-start;
+    }
+
+    #info .info-image img {
+        width: 50%;
+    }
+
+    #info .info-text {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Features */
+    #features {
+        display : block;
+        margin-top : none;
+    }
+
+    #features .feature{
+        display : block;
+        margin-top : 3em;
+    }
+}

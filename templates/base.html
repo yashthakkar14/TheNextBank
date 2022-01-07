@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/style.css')}}">
+    <link rel="icon" href="../static/images/Wallet.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{url_for('static',filename = 'js/test.js')}}"></script>
+    <title>The Next Bank</title>
+
+    {% block head %}
+
+    {% endblock head %}
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header id="header">
+                <nav id="main-navbar" class="navbar">
+                    <div class=logo-heading>
+                        <a href="/">
+                            <img id="nav-logo" src="../static/images/Wallet.png" alt="wallet_logo">
+                            <h1>The Next Bank</h1>
+                        </a>
+                    </div>
+                    <ul class="nav-features">
+                        <li class="nav-feature {{'active' if active_page == 'page1' else ''}}">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-feature {{'active' if active_page == 'page2' else ''}}">
+                            <a href="/customers">View Customers</a>
+                        </li>
+                        <li class="nav-feature {{'active' if active_page == 'page3' else ''}}">
+                            <a href="/transaction-history">Transaction History</a>
+                        </li>
+                        <a href="javascript:void(0);" class="icon" onclick="toggleButton()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </ul>
+                </nav>
+            </header>
+
+            {% block body %}
+
+            {% endblock body %}
+
+            <footer id="footer">
+                <p>
+                    Created by Yash Thakkar.<br>
+                    Copyright &copy; The Next Bank 2021<br>
+                    <!-- <a href="https://pikbest.com/free-png-images/gradient.html">Free gradient png images from pikbest.com</a> <br> -->
+                    <!-- Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> <br> -->
+                    <!-- Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> -->
+                </p>
+
+            </footer>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous">
+            </script>
+            <script src="../static/js/script.js"></script>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

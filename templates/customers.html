@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% set active_page = 'page2' %}
+
+{% block head %}
+<title>Create User</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/users.css') }}">
+{% endblock head %}
+
+{% block body %}
+<section class="user-page">
+    <h2 class = "heading">Click on the View Profile in order to view your details and carry out the transaction.</h2>
+    <div class="responsive-table">
+        <table class="user-table">
+            <thead class = "table-headings">
+                <tr>
+                    <th><span>Id</span></th>
+                    <th><span>Name</span></th>
+                    <th class = "detail_preserve"><span>Email</span></th>
+                    <th class = "detail_preserve"><span>Balance</span></th>
+                    <th><span>Profile</span></th>
+                </tr>
+            </thead>
+            <tbody class = "table-elements">
+            {% for customer in customer_details %}
+                <tr>
+                    <td>{{ customer.id }}</td>
+                    <td>{{ customer.Name }}</td>
+                    <td class = "detail_preserve">{{ customer.Email }}</td>
+                    <td class = "detail_preserve">Rs {{ customer.current_balance }}</td>
+                    <td><a href="/profile/{{customer.id}}"><button type = "button" class = "details_button">View Profile</button></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock body %}

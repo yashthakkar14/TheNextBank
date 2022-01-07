@@ -1,0 +1,45 @@
+#transaction_details{
+    margin-top : 3em;
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+    font-size : 1.8em;
+}
+
+.transaction_detail{
+    padding-top : 1em;
+}
+
+#transaction_details input, #transaction_details select, #transaction_details option{
+    width : 80%;
+    font-family: "Poppins", sans-serif;
+    font-weight : 800;
+    font-size : 0.75em;
+    height : 3em;
+    padding-top : 0.5em
+}
+
+.submit{
+    color : #6863c0;
+    font-family: "Poppins", sans-serif;
+    font-weight : 1000;
+    background: none;
+    border: 2px solid;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,transform 0.25s;
+}
+
+.submit:hover {
+    color: #0004ff;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.failed_message{
+    color : rgb(255, 0, 0);
+}
+.success_message{
+    color : rgb(36, 206, 36);
+}
+

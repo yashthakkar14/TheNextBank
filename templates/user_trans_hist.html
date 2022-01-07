@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% set active_page = 'page3' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/users.css')}}">
+<title>Profile Page</title>
+{% endblock head %}
+
+{% block body %}
+
+<section class="user_profile">
+    <h2>Below are the transaction details</h2>
+    <div class="responsive-table">
+        <table class="user-table">
+            <thead class="table-headings-profile">
+                <tr class=history_row>
+                    <th>ID</th>
+                    <th>Sender</th>
+                    <th>Receiver</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody class="table-elements">
+                {% if user_transaction  %}
+                    {% for transaction in user_transaction_history %}
+                        <tr>
+                            <td>{{transaction.id}}</td>
+                            <td>{{transaction.Sender}}</td>
+                            <td>{{transaction.Receiver}}</td>
+                            <td>Rs {{transaction.trans_amount}}</td>
+                            <td>{{transaction.Date}}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                        <td class = "No_Transaction" colspan="5" rowspan = "2">No Transactions Found</td>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{% endblock body %}

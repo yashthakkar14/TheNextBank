@@ -1,0 +1,13 @@
+.FAQ-content{
+    padding-top : 3em;
+    display : flex;
+    flex-direction : column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size : 1.35em;
+    /* align-items : center; */
+}
+
+.about-us{
+    width : 50%;
+}

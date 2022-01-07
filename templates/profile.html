@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% set active_page = 'page2' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/users.css')}}">
+<title>Profile Page</title>
+{% endblock head %}
+
+{% block body %}
+
+<section class = "user_profile">
+    <h2>Below are your profile details</h2>
+    <div class = "responsive-table">
+        <table class="user-table">
+            <thead class="table-headings-profile">
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>   
+            </thead>
+            <tbody class="table-elements">
+                <tr>
+                    <td>Customer ID</td>
+                    <td>{{customer_profile.id}}</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>{{customer_profile.Name}}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{{customer_profile.Email}}</td>
+                </tr>
+                <tr>
+                    <td>Your Current Balance</td>
+                    <td>Rs {{customer_profile.current_balance}}</td>
+                </tr>
+                <tr>
+                    <td>Perform Transaction</td>
+                    <td><a href="/transactions/{{customer_profile.id}}"><button type = "button" class = "user_transaction">Perform Transaction</button></a></td>
+                </tr>
+                <tr>
+                    <td>Your Transaction History</td>
+                    <td><a href="/transaction-history/{{customer_profile.Name}}"><button type = "button" class = "user_transaction">Your Transaction History</button></a></td>
+                </tr>
+
+
+                
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{% endblock body %}
